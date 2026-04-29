@@ -95,7 +95,7 @@
     display: inline-block;
 }
 
-/* hanya untuk link biasa, bukan dropdown */
+ 
 .navbar .nav-link:not(.dropdown-toggle)::after {
     content: "";
     position: absolute;
@@ -104,7 +104,7 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background: white;
+    background: black;
     transition: 0.3s ease;
 }
 
@@ -118,7 +118,7 @@
 
 .active-dropdown {
     background-color: #0d6efd;
-    color: white !important;
+    color: black !important;
 }
     </style>
 </html>
