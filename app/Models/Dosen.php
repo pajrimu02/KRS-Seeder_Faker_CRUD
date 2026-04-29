@@ -9,4 +9,8 @@ class Dosen extends Model
 {
     /** @use HasFactory<\Database\Factories\DosenFactory> */
     use HasFactory;
+    protected $fillable = ['nama', 'nidn'];
+
+    protected $primaryKey = 'nidn';
+    public $incrementing = false;
 }

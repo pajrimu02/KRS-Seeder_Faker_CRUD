@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('kode_matakuliah')->references('kode_matakuliah')->on('matakuliah')->onDelete('cascade');
-            $table->foreign('nidn')->references('nidn')->on('dosens')->onDelete('cascade');
+            $table->foreign('nidn')->references('nidn')->on('dosens')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

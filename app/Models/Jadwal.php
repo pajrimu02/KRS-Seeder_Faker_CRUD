@@ -9,5 +9,16 @@ class Jadwal extends Model
 {
     use HasFactory;
 
-    
+    protected $table = 'jadwals';
+    protected $guarded = [];
+
+    public function dosen()
+    {
+        return $this->belongsTo(Dosen::class, 'nidn');
+    }
+
+    public function matakuliah()
+    {
+        return $this->belongsTo(Matakuliah::class, 'kode_matakuliah');
+    }
 }
