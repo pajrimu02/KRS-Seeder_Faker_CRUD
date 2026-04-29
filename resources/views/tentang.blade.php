@@ -16,11 +16,7 @@
         <!-- TEXT KANAN -->
         <div class="col-md-7">
             <h2 class="fw-bold mb-3">Tentang Saya</h2>
-            <p class="text-muted">
-                Saya adalah seorang mahasiswa yang sedang mengembangkan sistem akademik (SIAKAD) 
-                berbasis web menggunakan Laravel. Sistem ini bertujuan untuk mempermudah pengelolaan 
-                data mahasiswa, KRS, jadwal, dan matakuliah.
-            </p>
+            <p class="text-muted about-text" id="typing"></p>
 
             <div class="d-flex gap-4 mt-3">
                 <div>
@@ -54,4 +50,44 @@
         transform: scale(1.05);
         transition: 0.3s;
     }
-</style>
+    .about-text {
+    background: rgba(13, 110, 253, 0.1);  
+    padding: 15px;
+    border-radius: 10px;
+    color: #333;
+    border-radius: 10px;
+    border-left: 5px solid #0d6efd;
+    }
+    .about-text:hover {
+        background: rgba(13, 110, 253, 0.15);
+        transition: 0.3s;
+    }
+    
+    #typing::after {
+    content: "|";
+    animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        50% { opacity: 0; }
+    }
+    </style>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = `Saya adalah seorang mahasiswa yang sedang mengembangkan sistem akademik (SIAKAD) berbasis web menggunakan Laravel.
+            Sistem ini bertujuan untuk mempermudah pengelolaan data mahasiswa, KRS, jadwal, dan matakuliah.`;
+
+            let i = 0;
+
+            function ketik() {
+                if (i < text.length) {
+                    document.getElementById("typing").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(ketik, 25);
+                }
+            }
+
+            ketik();
+        });
+        </script>
