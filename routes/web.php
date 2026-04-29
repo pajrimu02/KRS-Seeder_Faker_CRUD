@@ -12,6 +12,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('beranda');
+});
+
+Route::get('/tentang', function () {
+    return view('tentang');
+});
+
 Route::resource('dosen', DosenController::class);
 Route::resource('mahasiswa', MahasiswaController::class);
 Route::resource('matakuliah', MatakuliahController::class);

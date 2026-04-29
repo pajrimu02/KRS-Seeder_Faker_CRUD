@@ -4,7 +4,6 @@
 
 <div class="card p-4">
     <h4>Edit Mahasiswa</h4>
-
     <form action="{{ route('mahasiswa.update', $edit->npm) }}" method="POST">
         @csrf
         @method('PUT')

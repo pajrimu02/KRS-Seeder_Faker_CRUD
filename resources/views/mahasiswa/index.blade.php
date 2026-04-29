@@ -3,7 +3,15 @@
 @section('content')
 
 <div class="row">
-
+{{-- Notification --}}
+    <div class="mt-4 col-md-12">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+    </div>
+    
     <!-- FORM -->
     <div class="col-md-4">
         <div class="card p-3">

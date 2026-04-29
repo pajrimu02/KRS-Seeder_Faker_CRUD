@@ -5,6 +5,7 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -18,16 +19,16 @@
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Beranda</a>
+                    <a class="nav-link fw-bold text-white" href="/">Beranda</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tentang</a>
+                    <a class="nav-link fw-bold text-white" href="/tentang">Tentang</a>
                 </li>
 
                 <!-- DROPDOWN -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <li class="nav-item dropdown fw-bold">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">
                         Data Master
                     </a>
 
@@ -46,13 +47,7 @@
 </nav>
 
 <!-- CONTENT -->
-<div class="container mt-4 flex-grow-1">
-
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
+<div class="container flex-grow-1">
 
     @yield('content')
 
